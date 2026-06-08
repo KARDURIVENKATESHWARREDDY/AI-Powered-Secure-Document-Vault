@@ -1,0 +1,51 @@
+# Node modules
+node_modules/
+
+# Build outputs
+.next/
+out/
+/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment files
+.env*
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js
+.next/
+.next/cache/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Local Python virtual environments
+venv/
+.venv/
+env/
+
+# Databases and runtime files
+*.sqlite3
+*.db
+backend/chroma_db/
+backend/report_agent.db
+backend/static/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Ignore nested git repositories if they reappear accidentally
+frontend/.git
