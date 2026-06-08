@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { api } from "@/lib/api";
+import { api, BASE_URL } from "@/lib/api";
 import { useAuth } from "@/context/auth-context";
 import {
     ShieldAlert,
@@ -453,7 +453,7 @@ export default function DashboardPage() {
                                         <td className="p-4 pr-6 text-right" onClick={(e) => e.stopPropagation()}>
                                             <div className="flex justify-end gap-2">
                                                 <a
-                                                    href={`http://localhost:8000/api/v1/documents/${doc.id}/download?token=${localStorage.getItem("token")}`}
+                                                    href={`${BASE_URL}/documents/${doc.id}/download?token=${localStorage.getItem("token")}`}
                                                     download
                                                     className="p-2 hover:bg-slate-850 text-slate-400 hover:text-white rounded-lg transition-all"
                                                     title="Audited Download"
