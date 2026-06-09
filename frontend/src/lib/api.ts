@@ -1,4 +1,13 @@
-export const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+const getApiUrl = () => {
+    let url = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+    if (url && !url.includes("/api/v1")) {
+        const cleanUrl = url.endsWith("/") ? url.slice(0, -1) : url;
+        return `${cleanUrl}/api/v1`;
+    }
+    return url;
+};
+
+export const BASE_URL = getApiUrl();
 
 interface RequestOptions extends RequestInit {
     token?: string;
